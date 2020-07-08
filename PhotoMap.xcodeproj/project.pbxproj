@@ -17,6 +17,7 @@
 		6A22E5FB20F2A4A00052F3C6 /* LocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A22E5FA20F2A4A00052F3C6 /* LocationsViewController.m */; };
 		6A22E5FE20F2A4AE0052F3C6 /* FullImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A22E5FD20F2A4AE0052F3C6 /* FullImageViewController.m */; };
 		A81105B65E41CA038B04C843 /* libPods-PhotoMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CBCF83EE4466FF76810F69 /* libPods-PhotoMap.a */; };
+		D0B23ABA24B623EE008A7DEB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B23AB924B623EE008A7DEB /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		6A22E5FC20F2A4AE0052F3C6 /* FullImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FullImageViewController.h; sourceTree = "<group>"; };
 		6A22E5FD20F2A4AE0052F3C6 /* FullImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FullImageViewController.m; sourceTree = "<group>"; };
 		B7CBCF83EE4466FF76810F69 /* libPods-PhotoMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0B23AB924B623EE008A7DEB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B23ABA24B623EE008A7DEB /* MapKit.framework in Frameworks */,
 				A81105B65E41CA038B04C843 /* libPods-PhotoMap.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +59,7 @@
 		256FACF86D73B95C2A9F1824 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				A8401941145BC10DCBD077EB /* Frameworks */,
 				0FB8B281BC86DC294A795EB1 /* Pods-PhotoMap.debug.xcconfig */,
 				4BA548DB1FDF627664561D3C /* Pods-PhotoMap.release.xcconfig */,
 			);
@@ -68,7 +72,6 @@
 				6A22E5DA20F2A3D90052F3C6 /* PhotoMap */,
 				6A22E5D920F2A3D90052F3C6 /* Products */,
 				256FACF86D73B95C2A9F1824 /* Pods */,
-				A8401941145BC10DCBD077EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +124,7 @@
 		A8401941145BC10DCBD077EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0B23AB924B623EE008A7DEB /* MapKit.framework */,
 				B7CBCF83EE4466FF76810F69 /* libPods-PhotoMap.a */,
 			);
 			name = Frameworks;
