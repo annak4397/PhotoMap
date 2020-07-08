@@ -9,8 +9,8 @@
 #import "LocationsViewController.h"
 #import "LocationCell.h"
 
-static NSString * const clientID = @"QA1L0Z0ZNA2QVEEDHFPQWK0I5F1DE3GPLSNW4BZEBGJXUCFL";
-static NSString * const clientSecret = @"W2AOE1TYC4MHK5SZYOUGX0J3LVRALMPB4CXT3ZH21ZCPUMCU";
+static NSString * const clientID = @"WODP2YIGPU2NRI2QQGMIV0RYA0AN1C0GKXC3VXOGXU55DQLZ";
+static NSString * const clientSecret = @"NNDSL2BB3TXYFPJ430UJUYFNUNKDARCWTAU5KDPYNFUQK0C1";
 
 @interface LocationsViewController () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
