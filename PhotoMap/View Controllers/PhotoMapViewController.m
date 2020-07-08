@@ -9,8 +9,11 @@
 #import "PhotoMapViewController.h"
 #import <MapKit/MapKit.h>
 
-@interface PhotoMapViewController ()<MKMapViewDelegate>
+@interface PhotoMapViewController ()<MKMapViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) UIImage *selectedPhoto;
+- (IBAction)onCameraPress:(id)sender;
+
 
 @end
 
@@ -39,5 +42,34 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)onCameraPress:(id)sender {
+    UIImagePickerController *imagePickerVC = [UIImagePickerController new];
+    imagePickerVC.delegate = self;
+    imagePickerVC.allowsEditing = YES;
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    else {
+        NSLog(@"Camera 🚫 available so we will use photo library instead");
+        imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+
+    [self presentViewController:imagePickerVC animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    // Get the image captured by the UIImagePickerController
+    UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
+    UIImage *editedImage = info[UIImagePickerControllerEditedImage];
+
+    // Do something with the images (based on your use case)
+    self.selectedPhoto = originalImage;
+    // Dismiss UIImagePickerController to go back to your original view controller
+    [self dismissViewControllerAnimated:YES completion:^{
+        [self performSegueWithIdentifier:@"tagSegue" sender:nil];
+    }];
+}
 
 @end
